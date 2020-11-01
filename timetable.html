@@ -11,7 +11,33 @@
 		<link href="timetable.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
-		<div class="controls controls-row">
+		<h1>Timetable Planner</h1>
+		<div style="width: 100%; float: left; background-color: orange; height: 600px;">
+			<h1>Search for Courses</h1>
+			<input type="text" maxlength="5" placeholder="Course Name"/>
+			<input type="text" maxlength="5" placeholder="Course Code"/>
+			<input type="text" maxlength="5" placeholder="Optional Criteria"/>
+			<button>Search</button>
+		</div>
+		<div style="width: 50%; float: right; background-color: greenyellow; height: 400px;">
+			<h1>Subject List</h1>
+			<button>Display Subjects</button> 
+			<button>Hide Subjects</button>
+			<table style="width:40%">
+				<tr>
+					<th>Course Name</th>
+					<th>Course Code</th>
+				</tr>
+			</table>
+		</div>
+		<div style="width: 50%; float: left; background-color: gray; height: 400px">
+			<h1>Course Search</h1>
+			<input
+				type="text"
+				maxlength="5"
+				size="10"
+				placeholder="eg. 1001"/>
+				<button type="submit" class="btn btn-info span2" autofocus="">Submit</button>	
 			<select name="subject" id="inputSubject" class="span3">
 				<option value="">All Subjects</option>
 				<option value="ACTURSCI">Actuarial Science</option>
@@ -103,75 +129,42 @@
 				<option value="WOMENST">Women's Studies</option>
 				<option value="WRITING">Writing</option>
 			</select>
-
-			<label class="control-label span2" for="inputDesignation"
-				>Course Suffix:</label
-			>
-			<select class="span6" name="Designation" id="inputDesignation">
-				<option value="Any" selected="">Any (any suffix)</option>
-				<option value="Full">
-					Full Course Not Designated As An Essay Course (no suffix)
-				</option>
-				<option value="E">Essay Full Course (E)</option>
-				<option value="A">First Term Half-Course (A)</option>
-				<option value="B">Second Term Half-Course (B)</option>
-				<option value="F">First Term Essay Half-Course (F)</option>
-				<option value="G">Second Term Essay Half-Course (G)</option>
-				<option value="Q">First Term First Quarter Course (Q)</option>
-				<option value="R">First Term Second Quarter Course (R)</option>
-				<option value="S">Second Term First Quarter Course (S)</option>
-				<option value="T">Second Term Second Quarter Course (T)</option>
-				<option value="W">
-					First Term Full Course (full course offered in one term) (W)
-				</option>
-				<option value="X">
-					Second Term Full Course (full course offered in one term) (X)
-				</option>
-				<option value="Y">
-					Half-Course Offered In Other Than A Regular Session (Y)
-				</option>
-				<option value="Z">
-					Essay Half-Course Offered In Other Than A Regular Session (Z)
-				</option>
-			</select>
 		</div>
-		<div class="control-group">
-			<label class="control-label" for="inputCatalognbr">Course Number:</label>
-			<div class="controls controls-row">
-				<input
-					type="text"
-					class="span3"
-					name="catalognbr"
-					id="inputCatalognbr"
-					maxlength="5"
-					size="9"
-					placeholder="eg. 1001"
-					value=""
-				/>
+		<div style="width: 35%; float: left; background-color: blue; height: 400px;">
+			<h1>Class Schedule</h1>
+			<input type="text" maxlength="5" placeholder="Schedule Name"/>
+			<button>Create Schedule</button>
+			<p>Fill Schedule</p>
 
-				<label class="control-label span2" for="inputCourseType"
-					>Course Delivery Type:</label
-				>
+			<input type="text" placeholder="Subject Code"/>
+			<input type="text" placeholder="Course Code"/>
 
-				<select class="span2" name="CourseTime" id="inputCourseType">
-					<option value="All" selected="">All</option>
-					<option value="inPerson">In Person</option>
-					<option value="Blended">Blended</option>
-					<option value="Distance">Distance Studies/Online</option>
-				</select>
+			<input type="text" placeholder="Subject Code"/>
+			<input type="text" placeholder="Course Code"/>
 
-				<div class="span4">
-					<input
-						type="checkbox"
-						name="Status"
-						id="inputStatus"
-						value="Not Full"
-					/>
-					Show only courses open for registration. <br />*Note: may not be an
-					accurate reflection during paper add/drop.
-				</div>
-			</div>
+			<input type="text" placeholder="Subject Code"/>
+			<input type="text" placeholder="Course Code"/>
+
+			<input type="text" placeholder="Subject Code"/>
+			<input type="text" placeholder="Course Code"/>
+
+			<input type="text" placeholder="Subject Code"/>
+			<input type="text" placeholder="Course Code"/>
+
+			<input type="text" placeholder="Subject Code"/>
+			<input type="text" placeholder="Course Code"/>
+
+			<button>Fill Schedule</button>
+			<button>Clear Schedule</button>
 		</div>
-		<button type="submit" class="btn btn-info span2" autofocus="">Submit</button>
+		<div style="width: 65%; float: right; background-color: red; height: 400px;">
+			<h1>View and Edit Schedules</h1>
+			<button>List all Schedules</button> 
+			<button>Delete all Schedules</button>
+			<input type="text" placeholder="Schedule Name"/>
+			<button>Delete Schedule</button>
+			<input type="text" placeholder="Schedule Name"/>
+			<button>Delete Schedule</button>
+		</div>
 	</body>
 </html>
