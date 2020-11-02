@@ -1,0 +1,7 @@
+#subjectList {    
+    overflow:auto;
+    width: 50%; 
+    float: right; 
+    background-color: greenyellow; 
+    height: 400px;
+}
