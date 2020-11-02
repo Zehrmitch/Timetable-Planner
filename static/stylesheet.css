@@ -5,3 +5,11 @@
     background-color: greenyellow; 
     height: 400px;
 }
+
+#courseSearch {    
+    overflow:auto;
+    width: 50%; 
+    float: right; 
+    background-color: grey; 
+    height: 400px;
+}

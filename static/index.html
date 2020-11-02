@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="description"
+			content="A timetable to search course names and their codes"
+		/>
+		<meta name="author" content="Mitchell Zehr" />
+		<title>Timetable - mzehr4</title>
+		<link href="stylesheet.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1>Timetable Planner</h1>
+		<div style="width: 100%; float: left; background-color: orange; height: 600px;">
+			<h1>Search for Courses</h1>
+			<input type="text" maxlength="5" placeholder="Subject"/>
+			<input type="text" maxlength="5" placeholder="Course Code"/>
+			<input type="text" maxlength="5" placeholder="Course Component"/>
+			<button>Search</button>
+		</div>
+		<div id="subjectList">
+			<h1>Subject List</h1>
+			<button onclick="getSubjects()">Display Subjects</button> 
+			<button onclick="hideSubjects()">Hide Subjects</button>
+			<ul id="allSubjects"></ul>
+		</div>
+		<div id="courseSearch">
+			<h1>Course Search</h1>
+			<input
+				type="text"
+				size="10"
+				placeholder="eg. 1001"
+				id="courseCodeInput"/>
+				<button onclick="courseSearch()">Search</button>
+				<ul id="courseSearchResults"></ul>	
+		</div>
+		<!--
+		<div style="width: 35%; float: left; background-color: blue; height: 400px;">
+			<h1>Class Schedule</h1>
+			<input type="text" maxlength="5" placeholder="Schedule Name"/>
+			<button>Create Schedule</button>
+			<p>Fill Schedule</p>
+
+			<button>Fill Schedule</button>
+			<button>Clear Schedule</button>
+		</div>
+		<div style="width: 65%; float: right; background-color: red; height: 400px;">
+			<h1>View and Edit Schedules</h1>
+			<button>List all Schedules</button> 
+			<button>Delete all Schedules</button>
+			<input type="text" placeholder="Schedule Name"/>
+			<button>Delete Schedule</button>
+			<input type="text" placeholder="Schedule Name"/>
+			<button>Delete Schedule</button>
+		</div>
+	-->
+	<script defer type="text/javascript" src="frontEnd.js"></script>
+	</body>
+</html>
