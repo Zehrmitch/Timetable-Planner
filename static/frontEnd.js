@@ -27,7 +27,7 @@ function getSubjects() {
             console.log(data);
             data.forEach(e => {
                 const item = document.createElement('li');
-                item.appendChild(document.createTextNode(`${e.className}`));
+                item.appendChild(document.createTextNode(e.className));
                 ul.appendChild(item);
         });
     })
@@ -48,7 +48,7 @@ function courseSearch() {
             console.log(data);
             data.forEach(e => {
                 const item = document.createElement('li');
-                item.appendChild(document.createTextNode(`${e.subject} : ${e.catalog_nbr}`));
+                item.appendChild(document.createTextNode(e.subject + " : " + e.catalog_nbr));
                 ul.appendChild(item);
         });
     })
@@ -72,15 +72,15 @@ function timetableSearch() {
             }
             else{
             data.forEach(e => {
-                ul.appendChild(document.createElement('li').appendChild(document.createTextNode(`Subject: ${e.subject}`)));
+                ul.appendChild(document.createElement('li').appendChild(document.createTextNode("Subject: " + e.subject)));
                 ul.appendChild(document.createElement('p'));
-                ul.appendChild(document.createElement('li').appendChild(document.createTextNode(`Class name: ${e.className}`)));
+                ul.appendChild(document.createElement('li').appendChild(document.createTextNode("Class name: " + e.className)));
                 ul.appendChild(document.createElement('p'));
-                ul.appendChild(document.createElement('li').appendChild(document.createTextNode(`Class Number: ${e.catalog_nbr}`)));
+                ul.appendChild(document.createElement('li').appendChild(document.createTextNode("Class Number: "+ e.catalog_nbr)));
                 ul.appendChild(document.createElement('p'));
-                ul.appendChild(document.createElement('li').appendChild(document.createTextNode(`Course Code: ${e.catalog_nbr}`)));
+                ul.appendChild(document.createElement('li').appendChild(document.createTextNode("Course Code: "+ e.catalog_nbr)));
                 ul.appendChild(document.createElement('p'));
-                ul.appendChild(document.createElement('li').appendChild(document.createTextNode(`Description: ${e.catalog_description}`)));
+                ul.appendChild(document.createElement('li').appendChild(document.createTextNode("Description: " + e.catalog_description)));
             });
         }
     })
@@ -110,7 +110,7 @@ function viewSchedules() {
 		.then(data => {
             console.log(data);
             Object.keys(data).map(function(key, index) {
-                let content = 'Schedule Name: ' + key + "  || Number of courses: " + Object.keys(data).length;
+                let content = 'Schedule Name: ' + key + "  || Number of courses: " + Object.keys(key).length;
                 const item = document.createElement('li');
                 item.appendChild(document.createTextNode(content));
                 ul.appendChild(item);

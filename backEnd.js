@@ -103,7 +103,7 @@ function deleteAllSchedules() {
 
 function createSchedule(sName) {
     if(cache.getKey(sName) == undefined){
-        cache.setKey(sName, { code: 'subject'});
+        cache.setKey(sName, { });
         cache.save(true);
         let schedule = cache.getKey(sName);
         console.log(schedule);
