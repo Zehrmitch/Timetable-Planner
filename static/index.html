@@ -11,50 +11,65 @@
 		<link href="stylesheet.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
-		<h1>Timetable Planner</h1>
-		<div style="width: 100%; float: left; background-color: orange; height: 600px;">
-			<h1>Search for Courses</h1>
-			<input type="text" maxlength="5" placeholder="Subject"/>
-			<input type="text" maxlength="5" placeholder="Course Code"/>
-			<input type="text" maxlength="5" placeholder="Course Component"/>
-			<button>Search</button>
-		</div>
+		<h1>Timetable Planner - mzehr4</h1>
 		<div id="subjectList">
 			<h1>Subject List</h1>
-			<button onclick="getSubjects()">Display Subjects</button> 
+			<button onclick="getSubjects()">Display All Subjects</button> 
 			<button onclick="hideSubjects()">Hide Subjects</button>
 			<ul id="allSubjects"></ul>
 		</div>
 		<div id="courseSearch">
 			<h1>Course Search</h1>
-			<input
-				type="text"
-				size="10"
-				placeholder="eg. 1001"
-				id="courseCodeInput"/>
+			<input type="text" placeholder="eg. ACTURSCI" id="courseCodeInput"/>
 				<button onclick="courseSearch()">Search</button>
 				<ul id="courseSearchResults"></ul>	
 		</div>
-		<!--
-		<div style="width: 35%; float: left; background-color: blue; height: 400px;">
-			<h1>Class Schedule</h1>
-			<input type="text" maxlength="5" placeholder="Schedule Name"/>
-			<button>Create Schedule</button>
-			<p>Fill Schedule</p>
-
-			<button>Fill Schedule</button>
-			<button>Clear Schedule</button>
+		<div id="timetablePlanner">
+			<h1>Search Timetables</h1>
+			<input type="text" id="timetableSubject" placeholder="Subject"/>
+			<input type="text" id="timetableCourseCode" placeholder="Course Code"/>
+			<input type="text" id="timetableCourseComponent" placeholder="Course Component"/>
+			<button onclick="timetableSearch()">Search</button>
+			<ul id="timetableSearch"></ul>
 		</div>
-		<div style="width: 65%; float: right; background-color: red; height: 400px;">
-			<h1>View and Edit Schedules</h1>
-			<button>List all Schedules</button> 
-			<button>Delete all Schedules</button>
-			<input type="text" placeholder="Schedule Name"/>
-			<button>Delete Schedule</button>
-			<input type="text" placeholder="Schedule Name"/>
-			<button>Delete Schedule</button>
+		<div id="classSchedule">
+			<h1>New Class Schedule</h1>
+			<input id="scheduleName" type="text" placeholder="Schedule Name"/>
+			<button onclick="createSchedule()">Create Schedule</button>
+			<hr>
+			<input id="updateScheduleName" type="text" placeholder="Schedule to update"/>
+			<button onclick="addCourses()">Add Courses</button>
+			<p></p>
+			<input id="1c" type="text" placeholder="Course Code"/>
+			<input id="1n" type="text" placeholder="Subject Name"/>
+			<p></p>
+			<input id="2c" type="text" placeholder="Course Code"/>
+			<input id="2n" type="text" placeholder="Subject Name"/>
+			<p></p>
+			<input id="3c" type="text" placeholder="Course Code"/>
+			<input id="3n" type="text" placeholder="Subject Name"/>
+			<p></p>
+			<input id="4c" type="text" placeholder="Course Code"/>
+			<input id="4n" type="text" placeholder="Subject Name"/>
+			<p></p>
+			<input id="5c" type="text" placeholder="Course Code"/>
+			<input id="5n" type="text" placeholder="Subject Name"/>
+			<p></p>
+			<input id="6c" type="text" placeholder="Course Code"/>
+			<input id="6n" type="text" placeholder="Subject Name"/>
 		</div>
-	-->
+		<div id="viewAndEdit">
+			<h1>View and Edit Existing Schedules</h1>
+			<button onclick="viewSchedules()">List all Schedules</button> 
+			<button onclick="deleteAllSchedules()">Delete all Schedules</button>
+			<p></p>
+			<input id="scheduleToDelete"type="text" placeholder="Schedule Delete Name"/>
+			<button onclick="deleteSchedule()">Delete Schedule</button>
+			<input id="showScheduleCourses" type="text" placeholder="Show Schedule Name"/>
+			<button onclick="showSchedule()">Show Schedule</button>
+			<ul id="viewSchedules"></ul>
+			<ul id="showSchedule"></ul>
+		</div>
 	<script defer type="text/javascript" src="frontEnd.js"></script>
 	</body>
 </html>
