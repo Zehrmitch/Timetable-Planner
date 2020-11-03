@@ -1,15 +1,91 @@
-#subjectList {    
+#subjectList {  
+    box-shadow: 0 0 0 2px black inset;
     overflow:auto;
     width: 50%; 
     float: right; 
-    background-color: greenyellow; 
+    background-color: rgb(167, 237, 255); 
     height: 400px;
 }
 
 #courseSearch {    
+    box-shadow: 0 0 0 2px black inset;
     overflow:auto;
     width: 50%; 
     float: right; 
-    background-color: grey; 
+    background-color: rgb(167, 237, 255); 
     height: 400px;
 }
+
+#timetablePlanner { 
+    margin-top: 20px;   
+    box-shadow: 0 0 0 2px black inset;
+    overflow:auto;
+    width: 100%; 
+    float: left; 
+    background-color: rgb(167, 237, 255);
+    height: 400px;
+}
+
+#classSchedule {
+    overflow: auto;
+    margin-top: 20px;
+    box-shadow: 0 0 0 2px black inset;
+    width: 35%; 
+    float: left; 
+    background-color: rgb(167, 237, 255); 
+    height: 400px;
+}
+
+#viewAndEdit {
+    overflow: auto;
+    margin-top: 20px;
+    box-shadow: 0 0 0 2px black inset;
+    width: 65%; 
+    float: right; 
+    background-color: rgb(167, 237, 255); 
+    height: 400px;
+}
+
+#showSchedule {
+    float: right;
+    padding-right: 20px;
+    padding-left: 10px;
+    width: 50%;
+}
+
+#viewSchedules {
+    float: left;
+    padding-left: 20px;
+    padding-right: 10px;
+    width: 40%;
+}
+
+h1 {
+    font-family: Arial;
+    padding-left: 10px;
+}
+
+input {
+    margin-left: 10px;
+}
+
+button {
+    margin-left: 10px;
+}
+
+body {
+    background-color: rgb(245, 189, 245);
+}
+
+li {
+    font-family: Arial;
+    list-style-type: none;
+}
+
+hr {
+    height: 2px;
+    fill: black;
+    border-width:0;
+    background-color:black;
+}
+
